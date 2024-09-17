@@ -4,13 +4,13 @@ import { getAnalytics } from "firebase/analytics";
 
 // Firebase configuration using environment variables
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyAXsTFcMFqaezAHELRKSe2qFRSxcHUP0Kc",
+  authDomain: "flashcard-webapp-d8222.firebaseapp.com",
+  projectId: "flashcard-webapp-d8222",
+  storageBucket: "flashcard-webapp-d8222.appspot.com",
+  messagingSenderId: "605274616142",
+  appId: "1:605274616142:web:218894978752fa3626ee1f",
+  measurementId: "G-W38QYDEQME"
 };
 
 // Initialize Firebase
