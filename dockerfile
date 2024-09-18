@@ -1,26 +1,26 @@
-# Use an official node image as the base image
+# Use an official Node.js runtime as a parent image
 FROM node:18-alpine
 
-# Set the working directory in the container
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json files
+# Copy package.json and package-lock.json (or yarn.lock)
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy all other source files
+# Copy the rest of your application code
 COPY . .
 
-# Build the application
+# Build the application (assuming npm run build generates files in dist/)
 RUN npm run build
 
-# Install a lightweight server to serve the frontend (e.g., serve)
+# Install 'serve' to serve the dist directory
 RUN npm install -g serve
 
-# Expose port 3000 (or whichever port your app runs on)
+# Expose the port your app will run on
 EXPOSE 3000
 
-# Command to run the app
-CMD ["serve", "-s", "dist"]
+# Start the application at runtime and serve the dist directory
+CMD ["serve", "-s", "dist", "-l", "3000"]
